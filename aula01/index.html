@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!--
+HTML 
+
+Hypertext - São textos que aceitam links e áudio visual
+
+Markup - Marcações
+
+Language - Linguagem
+
+-->
+
+<html> <!-- Tag HTML-->
+
+<head> <!--Responsável por receber configurações da página-->
+
+  <meta charset="UTF-8"> <!--Definir as configurações dos caracteres da página-->
+
+  <title>Casa Criativa</title> <!--Título da página na aba da página-->
+
+  <!--propriedade: valor-->
+  <style> 
+    /*
+    CSS
+    Cascading Stylesheet     
+    */
+  
+
+    body{
+      background-color:#e5e5e5;
+      color: #24282b;
+      text-align: center;
+      height: 100%;
+    }
+
+    button {
+      border: none;
+      font-weight: bold;
+      background: none;
+      color: #ff5E84
+      
+
+    }
+
+    /* Acessando todos os elementos da classe fat*/
+    .fat {
+      color: white;
+      background: #ff5E84;
+      
+    }
+
+    /* Acessando apenas o elemento com ID footer, ID é único. Uma vez por elemnto*/
+    #footer a {
+      color: #25282B;
+      text-decoration: none;
+    }
+     
+    /*Criando a classe "hide" que será adiconada ou removida da classe "footer" 
+    conforme o "click" do mouse em cima do botão */ 
+    .hide{
+      display: none;
+
+     }
+
+
+  </style>  
+
+</head>
+
+<body>
+   
+  <img src="logo.png" alt="Imagem da Logomarca">
+
+  <p>
+    Ficar em casa em períodos longos, não deve ser nada fácil.
+  </p>
+
+  <p>  
+    Por isso, iremos catalogar ideias, <strong> brincadeiras, jogos, filmes, livros, cursos, dicas </strong> e tudo que 
+    for necessário para tornar esse momento mais interessante.
+  </p>
+
+  <p>
+    Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia.
+  </p>
+
+  <button>+ Adicionar Ideia </button>   
+  
+  <button class="fat">Ver Ideias</button>
+
+  <p id = "footer"> Com ❤️ <a href="https://rocketseat.com.br">Rocketseat</a></p>
+
+
+  <!--Script para quando o botão ver ideias for clicado o "footer" desaparece e 
+  quando for clicado novamente o "footer" reaparece-->
+
+  <script>
+      document
+      .querySelector("button.fat") 
+      .addEventListener("click",function(){
+        document
+          .querySelector("#footer")
+          .classList //Método para acessar todas as classes
+          .toggle("hide") // Método para Adicionar ou remover a classe Hide do "Footer"
+      })
+  </script>
+
+</body>
+
+
+</html>
