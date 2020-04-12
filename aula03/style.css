@@ -8,6 +8,8 @@
     Preenchimento
     Bordas
     Posicionamentos
+    Cores
+    Fontes
 */
 
 /*
@@ -24,7 +26,9 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-
+body.hideScroll{
+  overflow: hidden;
+}
 
 a {
   color: #ff5E84;
@@ -54,7 +58,7 @@ p, .description{
 
 #intro{
   width: 300px;
-  margin-right: 20px;
+  margin-right: 64px;
 
 }
 
@@ -90,19 +94,24 @@ button:hover{
 }
 
 
-button.fat {
+.button {
   color: white;
   background: #ff5E84;
   width: 150px;
   height: 40px;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: opx 8px 16px rgba(255, 0, 92, 0.16);
     
 }
 
-button.fat:hover{
+.button:hover{
   text-decoration: none;
-
+  background-color: #0984e3;
 }
 
 footer {
@@ -159,16 +168,20 @@ footer a{
   background: #ff5E84;
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   transition: 400ms;
 }
 
+#modal.addScroll{
+  overflow: auto;
+}
+
 #modal .content{
-  margin-top: 128px;
+  margin-top: 15%;
   color: white;
 
 }
@@ -182,7 +195,7 @@ footer a{
 #modal form {
   width: 80%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 15%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -256,4 +269,72 @@ form button:hover{
 }
 
 
+/* IDEIA.HTML */
+
+#page-ideias #container{
+  display: block;
+}
+
+#page-ideias header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-ideias nav{
+  display: flex;
+  align-items: center;
+}
+
+#page-ideias nav li{
+  list-style-type: none;
+  margin-right: 16px;
+
+}
+
+#page-ideias nav li a{
+  color: #24282b;
+}
+
+#page-ideias nav li a.button{
+  color: white;
+}
+
+
+
+#page-ideias nav li:last-child{
+  margin: 0;
+}
+
+
+
+section#title {
+  text-align: center;
+  margin: 64px 0;
+}
+
+section#title p{
+  opacity: 0.7;
+  margin: 0;
+}
+
+section#title h1{
+  margin: 0;
+  font-size: 28px;
+}
+
+section#ideias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section#ideias .idea{
+  margin: 0;
+}
+
+section#ideias,
+section#ideias,
+footer{
+  margin-top: 64px;
+}
 
