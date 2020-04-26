@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!--
+HTML 
+
+Hypertext - São textos que aceitam links e áudio visual
+
+Markup - Marcações
+
+Language - Linguagem
+
+-->
+
+<html> <!-- Tag HTML-->
+
+<head> <!--Responsável por receber configurações da página-->
+
+  <meta charset="UTF-8"> <!--Definir as configurações dos caracteres da página-->
+
+  {% block title %}
+    <title>Casa Criativa</title> <!--Título da página na aba da página-->
+  {% endblock title %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!--Link para o arquivo CSS-->
+  <link rel="stylesheet" href="/style.css"> 
+
+</head>
+
+<body id = '{{ bodyID }}'>
+  
+  <div id="container">
+
+
+    {% block content %}
+    {% endblock %}
+
+
+  </div>
+
+ 
+
+  {% include 'modal.html' %}
+
+  
+  <!--Script para quando o botão ver ideias for clicado o "footer" desaparece e 
+  quando for clicado novamente o "footer" reaparece-->
+
+  <script src="/scripts.js"></script>
+
+</body>
+
+
+</html>
